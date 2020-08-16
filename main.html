@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Flipr</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styleflipr.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+     <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Brush Script MT">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+	<nav class="navbar navbar-custom navbar-expand-sm navbar-light nav-trans">
+    <div class="container">   
+        <div class="collapse navbar-collapse" id="Navbar">
+             <ul class="navbar-nav ml-auto mr-5">
+             	
+ <li class="nav-item active nav-hover mr-3"><a class="nav-link" href="main.html">Home</a></li>
+                    <li class="nav-item nav-hover mr-3">
+                        <a class="nav-link" href="charts.html">Charts</a>
+                    </li>
+
+            <li class="nav-item nav-hover mr-5"><a class="nav-link">About Us</a></li>
+        </ul>
+        </div>      
+    </div>   
+</nav>
+
+
+<div class="container"><br>
+  <form name="demoForm">
+        <select name="demoSelect" onchange="showData()">
+            <option >NSE (Nifty)</option>
+            <OPTION>RELIANCE</OPTION>
+            <option >ASHOK LEYLAND</option>
+            <option >TATA MOTORS</option>
+            <OPTION> BSE</OPTION>
+            <option>EICHER MOTORS</option>
+            <option>CIPLA</option>
+        </select>
+    </form>
+
+    <p id="firstP">&nbsp;</p>
+
+
+
+    <script>
+
+    function showData() {
+        var theSelect = demoForm.demoSelect;
+        var firstP = document.getElementById('firstP');
+        firstP.innerHTML = (theSelect[theSelect.selectedIndex].value);
+    }
+     </script>
+     <hr style="background-color: lightblue;width: 100%;height: 10px;border-radius: 6px;">
+  <!--stock market row 1-->
+<div class="row row-container">
+
+  <div class="col col-md-8 col-sm-5">
+  <p> <h1 id="sensex-value"><b>11,3531.68</b></h1></p><br>
+    <p id="sensex-up-down"><img src="img/sensex-up.png" style="height: 30px;
+  width: 30px;"> 34.80(0.46%)</p>
+  <p id="date"></p>
+    <br><br><br><br><br><br>
+</div>
+
+
+  <div class="col col-md-4 col-sm-7 align-self-center order-sm-last" >
+    <div class="slidecontainer">
+      <p>Day Range: <span id="demo"></span></p>
+  <input type="range" min="11000.3664" max="15000.4745" value="11245.345" class="slider" id="myRange">
+  
+</div>
+  </div>
+  
+     
+</div>
+ <!--stock market row 2-->
+ <div class="row row-container">
+
+  <div class="col col-md-8 col-sm-5">
+
+</div>
+
+
+  <div class="col col-md-4 col-sm-7 align-self-center order-sm-last" >
+  <div class="slidecontainer">
+    <p>52-Week Range: <span id="demo1"></span></p>
+  <input type="range" min="7535.35" max="14588.58" value="8211.547" class="slider" id="myRange1"><br><br><br>
+  
+</div>
+  </div>
+     
+</div>
+<hr style="background-color: lightgray;width: 100%;height: 8px;border-radius: 4px;">
+<hr style="background-color: lightgray;width: 100%;height: 7px;border-radius: 6px;">
+
+<h2 style="color: gray">OVER VIEW</h2>
+<hr style="background-color: lightgray;width: 100%;height: 7px;border-radius: 6px;">
+
+<table>
+  <tr>
+    <td style="color: gray">Open</td>
+    <td><b>13,234.40</b></td>
+    <td style="color: gray">Day Low</td>
+    <td><b>13,459.34</b></td>
+  </tr>
+  <tr>
+    <td style="color: gray">Previous Close</td>
+    <td><b>13,354.67</b></td>
+    <td style="color: gray">52 Week High</td>
+    <td><b>15,092.23</td>
+  </tr>
+  <tr>
+    <td style="color: gray">Day High</td>
+    <td><b>14,367.13</b></td>
+    <td style="color: gray">52 Week Low</td>
+    <td><b>9,573.09</b></td>
+  </tr>
+
+
+</table>
+
+<script type="text/javascript">
+var d = new Date();
+document.getElementById("date").innerHTML = d;
+
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
+var slider1 = document.getElementById("myRange1");
+var output1 = document.getElementById("demo1");
+output.innerHTML = slider.value;
+
+slider1.oninput = function() {
+  output1.innerHTML = this.value;
+}
+
+</script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.stock.min.js"></script>
+</head>
+<body>
+<div id="chartContainer" style="height: 400px; width: 100%;"></div>
+</body>
+</html>
+</div>
+
+
+
+<!--footer starts here-->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">             
+                <div class="col-4 off-set-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="link-custom">Home</a></li>
+                        <li><a href="./aboutus.html" class="link-custom">About</a></li>
+                        <li><a href="#" class="link-custom">Menu</a></li>
+                        <li><a href="#" class="link-custom">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+                      121, Clear Water Bay Road<br>
+                      Clear Water Bay, Kowloon<br>
+                      Chhattisgarh<br>
+                      <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
+                      <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
+                      <i class="fa fa-envelope fa-lg"></i>: 
+                      <a href="warlust@travel.net" class="link-custom">flipr@business.net</a>
+
+                   </address>
+                </div>
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center">
+                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                    </div>
+                </div>
+           </div>
+           <div class="row justify-content-center">             
+                <div class="col-auto">
+                    <p>&copy; Copyright 2020 Ammy</p>
+                </div>
+           </div>
+        
+    </footer>
+
+
+ <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

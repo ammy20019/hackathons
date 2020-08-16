@@ -1,0 +1,2 @@
+Download the file and Open the main.html file directly after downloading it.
+However some bootstrap or node_modules are linked in the main webpage.
