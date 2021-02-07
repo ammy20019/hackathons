@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  .jumbotron {
+  	background-image: url("bg2.jpg");
+    background-color: #0073e6;
+    color: #fff;
+    padding: 100px 25px;
+    text-transform: uppercase;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo {
+    color: #0073e6;
+    font-size: 200px;
+  }
+  label{
+  	font-size: 20px;
+  	color: #0073e6;
+  }
+  input{
+  width:180px;
+  	border: none;
+  	border-bottom: 2px solid #0073e6;
+  }
+  select{
+    width:180px;
+  	border: none;
+  	border-bottom: 2px solid #0073e6;
+  }
+  button{
+  	background-color: #0073e6;
+  	color: white;
+  	border-radius: 5px;
+  	border-color: white;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #0073e6s;
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<div class="jumbotron text-center">
+  <h1><b>Credit Baba</b></h1>
+  <p>E-Loan Signing Predictor</p>
+</div>
+
+<!-- Container (Input Section) -->
+<h2 align="center" style="color: #0073e6;">Give us the following information</h2><br>
+<div class="container" align="center">
+	<form action='/predict' method="post">
+		<div class="row" >
+			<div class="col-sm-4">
+      <label><b>Age</b></label>
+          <br>
+        <input placeholder="In Years" name="Temperature" id="Age" type="text">
+    </div>
+    <div class="col-sm-4" >
+      <label for="Payschedule">Payschedule:</label>
+      <br>
+<select id="Payschedule" name="Payschedule">
+  <option value="0">Bi-weekly</option>
+  <option value="1">Monthly</option>
+  <option value="2">Semi Monthly</option>
+  <option value="3">Weekly</option>
+</select>
+    </div>
+    <div class="col-sm-4" >
+     <label for="HomeOwner">HomeOwner:</label>
+      <br>
+<select id="HomeOwner" name="HomeOwner">
+  <option value="1">Yes</option>
+  <option value="0">No</option>
+
+</select>
+    </div>
+  </div>
+      <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <label><b>Income</b></label>
+          <br>
+        <input placeholder="In $" name="Income" id="Income" type="text">
+    </div>
+    <div class="col-sm-4" >
+      <label ><b>Months Employed </b></label>
+            <br>
+         <input id="Months Employed" name="Months Employed" placeholder=""  type="text" >
+    </div>
+    <div class="col-sm-4" >
+      <label><b>Current Adress Year</b></label>
+            <br>
+          <input id="Current Adress Year" name="Current Adress Year" placeholder="" type="text">
+    </div>
+  </div>
+<br>
+  <div class="row">
+    <div class="col-sm-4">
+      <label><b>Account Age Months</b></label>
+          <br>
+        <input placeholder="In Months" name="personal_account_m" id="personal_account_m" type="text">
+    </div>
+    <div class="col-sm-4" >
+      <label ><b>Account Age Years </b></label>
+            <br>
+         <input id="personal_account_y" name="personal_account_y" placeholder="In Years"  type="text" >
+    </div>
+    <div class="col-sm-4" >
+      <label for="Debt Statues">Debt Statues:</label>
+      <br>
+<select id="Debt Statues" name="Debt Statues">
+
+  <option value="1">Yes</option>
+  <option value="0">No</option>
+</select>
+    </div>
+<br>
+  </div>
+        <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <label><b>Amount Requested</b></label>
+          <br>
+        <input placeholder="In $" name="Amount Requested" id="Amount Requested" type="text">
+    </div>
+    <div class="col-sm-4" >
+      <label ><b>Credit Score </b></label>
+            <br>
+         <input id="Risk Score" name="Risk Score" placeholder=""  type="text" >
+    </div>
+    <div class="col-sm-4" >
+      <label><b>Inquiries Last Month</b></label>
+            <br>
+          <input id="Inquiries Last Month" name="Inquiries Last Month" placeholder="" type="text">
+    </div>
+  </div>
+
+  <br><br>
+  <div class="row center">
+          <button type="submit">Predict Probability</button>
+   </div>
+</form>
+<br><br>
+<div class="row" align="center">
+	<label style=" font-size: 50px; color: #0073e6;">{{pred}}</label>
+</div>
+
+
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About Us</h2><br>
+      <h4>This is small Machine learning project created by the students of the Vellore Institute of technology - Amaravthi on the hackathon conducted by the Georgia University. This application takes the information from the client to predict whether he/she is eligible to receive loan from bank based on their financial history. This Application uses Machine learning algorithm Random forest with Adaboost technique to predict with a pre-trained model of around 18k rows of data.</h4><br>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"></span>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>To Contact us.</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> bhargav.18bcd7017@vitap.ac.in</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> amit.18mis7250@vitap.ac.in</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> harsha.18bcd7026@vitap.ac.in</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> rushik.18bcn7008@vitap.ac.in</p>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
